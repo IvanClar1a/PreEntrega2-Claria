@@ -2,13 +2,15 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 import CartWidget from '../CartWidget/CartWidget';
 
 //* Imports para usar las imagenes
 //import logo from '../../assets/logo_nike.jpg';
 //import logo from '../../assets/header_logo_nuevo.png';
-const Header = () => {
+
+const Navbar1 = () => {
   return (
 
     
@@ -22,15 +24,16 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link href="#categorias">Categorias</Nav.Link>
-                <Nav.Link href="#escritorio">Pcs de Escritorio</Nav.Link>
-                <Nav.Link href="#notebooks">Notebooks</Nav.Link>
-                <Nav.Link href="#placaVideo">Placa de video</Nav.Link>
+                <Link to='/category/Celular'>Celular </Link>
+                <Link to='/category/Computadora'>Notebooks</Link>
+                <Link to='/category/Pantallas'>Monitores</Link>
                 
             </Nav>
 
-            {/* cOMPONENTE CART WIDGET*/}
-
+            {/* COMPONENTE CART WIDGET*/}
+            
             <CartWidget />
+
             </Navbar.Collapse>
         </Container>
         </Navbar>
@@ -40,4 +43,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navbar1
